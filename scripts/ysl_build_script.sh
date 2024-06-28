@@ -9,8 +9,8 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://gitlab.com/Panchajanya1999/azure-clang.git --depth=1 clang
-        KBUILD_COMPILER_STRING="Azure clang 15.0"
+        git clone https://github.com/kdrag0n/proton-clang --depth=1 clang
+        KBUILD_COMPILER_STRING="Proton clang 13.0"
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
