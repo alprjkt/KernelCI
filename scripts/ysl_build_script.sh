@@ -116,7 +116,7 @@ compile() {
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 The-Darkness-Kernel-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 Paradise-CAF-Kernel-"${CODENAME}"-"${DATE}".zip ./*
     cd ..
 }
 
