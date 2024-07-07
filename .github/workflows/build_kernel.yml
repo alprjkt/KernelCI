@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       device:
-          description: 'device codename (e.g ysl)'
+      description: 'device codename (e.g ysl)'
           required: true
       repo:
           description: 'Kernel source link (dont include . git at the end)'
@@ -12,14 +12,9 @@ on:
       branch:
           description: 'Kernel source branch'
           required: true
-      token:
-          description: 'Telegram bot token'
-          required: true
-      chat_id:
-          description: 'Telegram chat id'
-          required: true
-
-
+      token: ${{ secrets.TELEGRAM_TOKEN }}
+      chat_id: ${{ secrets.TELEGRAM_TO }}
+      
 env:
   TZ: Asia/Jakarta
   DEVICE: ${{ github.event.inputs.device }}
