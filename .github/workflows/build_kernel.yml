@@ -6,14 +6,12 @@ on:
       device:
           description: 'device codename (e.g ysl)'
           required: true
-        repo:
+      repo:
           description: 'Kernel source link (dont include . git at the end)'
           required: true
       branch:
           description: 'Kernel source branch'
           required: true
-      token: ${{ secrets.TELEGRAM_TOKEN }}
-      chat_id: ${{ secrets.TELEGRAM_TO }}
       
 env:
   TZ: Asia/Jakarta
@@ -21,8 +19,8 @@ env:
   REPO: ${{ github.event.inputs.repo }}
   BRANCH: ${{ github.event.inputs.branch }}
   GKI: ${{ github.event.inputs.gki }}
-  token: ${{ github.event.inputs.token }}
-  chat_id: ${{ github.event.inputs.chat_id }}
+  token: ${{ secrets.TELEGRAM_TOKEN }}
+  chat_id: ${{ secrets.TELEGRAM_TO }}
 
 jobs:
   kernel-build:
