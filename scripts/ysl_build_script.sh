@@ -9,8 +9,8 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://gitlab.com/LeCmnGend/clang -b clang-17 --depth=1 clang
-        KBUILD_COMPILER_STRING="Aosp clang 17.0"
+        git clone https://gitlab.com/LeCmnGend/clang -b clang-16 --depth=1 clang
+        KBUILD_COMPILER_STRING="Aosp clang 16.0"
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
