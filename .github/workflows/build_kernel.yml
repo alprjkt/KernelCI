@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       device:
-      description: 'device codename (e.g ysl)'
+          description: 'device codename (e.g ysl)'
           required: true
-      repo:
+        repo:
           description: 'Kernel source link (dont include . git at the end)'
           required: true
       branch:
