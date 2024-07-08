@@ -110,13 +110,13 @@ compile() {
         exit 1
     fi
 
-    git clone --depth=1 https://github.com/ALprjkt/Anykernel3.git AnyKernel -b ysl
+    git clone --depth=1 https://github.com/ALprjkt/Anykernel3.git AnyKernel -b ysl2
     cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 Paradise-CAF-Kernel-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 OnePiece-EOL-"${CODENAME}"-"${DATE}".zip ./*
     cd ..
 }
 
