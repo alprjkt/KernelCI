@@ -116,7 +116,7 @@ compile() {
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 OnePiece-EOL-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 ワンピース-OC-"${CODENAME}"-"${DATE}".zip ./*
     cd ..
 }
 
