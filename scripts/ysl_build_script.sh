@@ -10,7 +10,6 @@ clang() {
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
         git clone https://gitlab.com/LeCmnGend/clang -b clang-r510928 --depth=1 clang
-        KBUILD_COMPILER_STRING="Android clang 18.0"
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
@@ -23,7 +22,6 @@ START=$(date +"%s")
 KERNEL_DIR=$(pwd)
 CACHE=1
 export CACHE
-export KBUILD_COMPILER_STRING
 ARCH=arm64
 export ARCH
 DEVICE="Redmi S2"
@@ -32,12 +30,8 @@ CODENAME="ysl"
 export CODENAME
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
-COMMIT_HASH=$(git rev-parse --short HEAD)
-export COMMIT_HASH
 PROCS=$(nproc --all)
 export PROCS
-STATUS=STABLE
-export STATUS
 source "${HOME}"/.bashrc && source "${HOME}"/.profile
 if [ $CACHE = 1 ]; then
     ccache -M 100G
@@ -66,9 +60,6 @@ sendinfo() {
 *Date*: \`${DATE}\`
 *Device*: \`${DEVICE} (${CODENAME})\`
 *Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`
-*Last Commit*: [${COMMIT_HASH}](${REPO}/commit/${COMMIT_HASH})
-*Compiler*: \`${KBUILD_COMPILER_STRING}\`
-*Build Status*: \`${STATUS}\`"
 }
 
 # Push kernel to channel
@@ -116,7 +107,7 @@ compile() {
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 ワンピース-OC-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 Wanpis-kernel-"${CODENAME}"-"${DATE}".zip ./*
     cd ..
 }
 
