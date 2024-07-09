@@ -59,7 +59,7 @@ sendinfo() {
 *Building on*: \`Github actions\`
 *Date*: \`${DATE}\`
 *Device*: \`${DEVICE} (${CODENAME})\`
-*Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`
+*Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`"
 }
 
 # Push kernel to channel
