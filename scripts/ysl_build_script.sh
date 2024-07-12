@@ -104,7 +104,7 @@ compile() {
         exit 1
     fi
 
-    git clone --depth=1 https://github.com/ALprjkt/Anykernel3.git AnyKernel -b ysl2
+    git clone --depth=1 https://github.com/ALprjkt/Anykernel3.git AnyKernel -b ysl
     cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 # Zipping
