@@ -28,6 +28,8 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
+VERSION="v1.0"
+export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
 PROCS=$(nproc --all)
@@ -59,6 +61,7 @@ sendinfo() {
 *Building on*: \`Github actions\`
 *Date*: \`${DATE}\`
 *Device*: \`${DEVICE} (${CODENAME})\`
+*Version*: \'${VERSION}\'
 *Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`"
 }
 
@@ -107,7 +110,7 @@ compile() {
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 Wanpis-kernel-"${CODENAME}"-"${DATE}".zip ./*
+    zip -r9 Paradise-kernel-"${CODENAME}"-"${VERSION}"-"${DATE}".zip ./*
     cd ..
 }
 
