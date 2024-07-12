@@ -61,7 +61,7 @@ sendinfo() {
 *Building on*: \`Github actions\`
 *Date*: \`${DATE}\`
 *Device*: \`${DEVICE} (${CODENAME})\`
-*Version*: \'${VERSION}\'
+*Version*: \`${VERSION}\`
 *Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`"
 }
 
