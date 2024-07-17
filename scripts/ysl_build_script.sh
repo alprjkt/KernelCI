@@ -28,7 +28,7 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="AL"
+KERNELNAME="ReallySnow"
 export KERNELNAME
 VERSION="v1.0"
 export VERSION
