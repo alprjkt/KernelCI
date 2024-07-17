@@ -9,7 +9,7 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://github.com/kdrag0n/proton-clang -b master --depth=1 clang
+        git clone https://gitlab.com/nekoprjkt/aosp-clang -b 17 --depth=1 clang
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
@@ -28,6 +28,8 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
+KERNELNAME="AL"
+export KERNELNAME
 VERSION="v1.0"
 export VERSION
 DEFCONFIG="ysl_defconfig"
@@ -61,6 +63,7 @@ sendinfo() {
 *Building on*: \`Github actions\`
 *Date*: \`${DATE}\`
 *Device*: \`${DEVICE} (${CODENAME})\`
+*KernelName*: \`${KERNELNAME}\`
 *Version*: \`${VERSION}\`
 *Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`"
 }
@@ -110,7 +113,7 @@ compile() {
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 Paradise-kernel-"${CODENAME}"-"${VERSION}"-"${DATE}".zip ./*
+    zip -r9 "${KERNELNAME}"-kernel-"${CODENAME}"-"${VERSION}"-"${DATE}".zip ./*
     cd ..
 }
 
