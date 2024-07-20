@@ -9,7 +9,7 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://gitlab.com/Panchajanya1999/azure-clang -b main --depth=1 clang
+        git clone https://gitlab.com/cherishos-tiramisu/vince-clang-17 -b 16 --depth=1 clang
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
