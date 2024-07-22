@@ -9,7 +9,7 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://gitlab.com/LeCmnGend/clang -b clang-r510928 --depth=1 clang
+        git clone https://gitlab.com/nekoprjkt/aosp-clang -b 17 --depth=1 clang
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
@@ -28,9 +28,9 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="ReallySnow"
+KERNELNAME="Wanpis"
 export KERNELNAME
-VERSION="v1.5"
+VERSION="OC"
 export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
