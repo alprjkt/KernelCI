@@ -30,7 +30,7 @@ CODENAME="ysl"
 export CODENAME
 KERNELNAME="Wanpis"
 export KERNELNAME
-VERSION="OC"
+VERSION="EOL"
 export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
