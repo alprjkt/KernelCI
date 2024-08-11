@@ -16,6 +16,19 @@ clang() {
     echo "Done"
 }
 
+Kernelsu() {
+if: ${{ env.withKernelSU == 'true' }}
+        run: |
+          if [ -d "./KernelSU" ]; then
+            rm -rf "./KernelSU"
+          fi
+          if [ -d "./drivers/kernelsu" ]; then
+            rm -rf "./drivers/kernelsu"
+          fi
+
+          curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -
+}
+
 IMAGE=$(pwd)/out/arch/arm64/boot/Image.gz-dtb
 DATE=$(date +"%Y%m%d-%H%M")
 START=$(date +"%s")
