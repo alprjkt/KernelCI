@@ -28,9 +28,9 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="Wanpis"
+KERNELNAME="OnePiece"
 export KERNELNAME
-VERSION="EOL"
+VERSION="FINAL"
 export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
