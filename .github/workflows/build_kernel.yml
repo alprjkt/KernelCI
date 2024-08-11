@@ -12,8 +12,6 @@ on:
       branch:
           description: 'Kernel source branch'
           required: true
-      withKernelSu:
-           required: true
       
 env:
   TZ: Asia/Jakarta
