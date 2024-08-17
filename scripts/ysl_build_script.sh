@@ -28,9 +28,9 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="OnePiece"
+KERNELNAME="AL"
 export KERNELNAME
-VERSION="FINAL"
+VERSION="R1"
 export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
