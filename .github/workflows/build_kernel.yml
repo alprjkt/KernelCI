@@ -42,7 +42,7 @@ jobs:
       - name: Compiling
         run: |
           if [ "${DEVICE}" = "ysl" ]; then
-            wget https://raw.githubusercontent.com/ALprjkt/KernelCI/main/scripts/ysl_build_script.sh
+            wget https://raw.githubusercontent.com/animelopers/KernelCI/main/scripts/ysl_build_script.sh
             bash ysl_build_script.sh
             echo "Device not supported yet"
           fi
