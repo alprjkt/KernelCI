@@ -28,10 +28,8 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="AL"
+KERNELNAME="Nothing"
 export KERNELNAME
-VERSION="R1"
-export VERSION
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
 PROCS=$(nproc --all)
@@ -113,7 +111,7 @@ compile() {
 # Zipping
 zipping() {
     cd AnyKernel || exit 1
-    zip -r9 "${KERNELNAME}"-kernel-"${CODENAME}"-"${VERSION}"-"${DATE}".zip ./*
+    zip -r9 "${KERNELNAME}"-kernel-"${CODENAME}"-"${DATE}".zip ./*
     cd ..
 }
 
