@@ -28,7 +28,7 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="Nothing"
+KERNELNAME="AL"
 export KERNELNAME
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
@@ -62,7 +62,6 @@ sendinfo() {
 *Date*: \`${DATE}\`
 *Device*: \`${DEVICE} (${CODENAME})\`
 *KernelName*: \`${KERNELNAME}\`
-*Version*: \`${VERSION}\`
 *Branch*: \`$(git rev-parse --abbrev-ref HEAD)\`"
 }
 
