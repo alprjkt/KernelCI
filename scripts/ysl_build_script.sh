@@ -28,7 +28,7 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="AL"
+KERNELNAME="Neko"
 export KERNELNAME
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
@@ -104,7 +104,7 @@ compile() {
         exit 1
     fi
 
-    git clone --depth=1 https://github.com/ALprjkt/Anykernel3.git AnyKernel -b ysl
+    git clone --depth=1 https://github.com/k4ngcaribug/Anykernel3.git AnyKernel -b ysl
     cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 # Zipping
