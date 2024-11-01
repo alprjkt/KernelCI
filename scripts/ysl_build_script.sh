@@ -9,7 +9,7 @@ clang() {
     rm -rf clang
     echo "Cloning clang"
     if [ ! -d "clang" ]; then
-        git clone https://gitlab.com/nekoprjkt/aosp-clang -b 17 --depth=1 clang
+        git clone https://gitlab.com/LeCmnGend/clang -b clang-19 --depth=1 clang
         PATH="${PWD}/clang/bin:${PATH}"
     fi
     sudo apt install -y ccache
@@ -28,7 +28,7 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="Neko"
+KERNELNAME="Meow"
 export KERNELNAME
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
@@ -36,7 +36,7 @@ PROCS=$(nproc --all)
 export PROCS
 source "${HOME}"/.bashrc && source "${HOME}"/.profile
 if [ $CACHE = 1 ]; then
-    ccache -M 50G
+    ccache -M 100G
     export USE_CCACHE=1
 fi
 LC_ALL=C
