@@ -28,7 +28,7 @@ DEVICE="Redmi S2"
 export DEVICE
 CODENAME="ysl"
 export CODENAME
-KERNELNAME="Meow"
+KERNELNAME="Shifu"
 export KERNELNAME
 DEFCONFIG="ysl_defconfig"
 export DEFCONFIG
